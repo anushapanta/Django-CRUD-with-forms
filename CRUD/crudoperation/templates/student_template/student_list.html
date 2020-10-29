@@ -5,7 +5,7 @@
     <table class="table">
         <thead>
             <tr>
-                <!-- <th scope="col">Student_ID</th> -->
+                <th scope="col">Student_ID</th>
                 <th scope="col">FirstName</th>
                 <th scope="col">LastName</th>
                 <th scope="col">Address</th>
@@ -29,8 +29,8 @@
                 <td>{{ student.phone }}</td>
                 <td>{{ student.image }}</td>
                 <td>{{ student.faculty }}</td>
-                <td><a type="button" class="btn btn-warning" href="/student_update/{{ student.id }}">Update</a>
-                    <a type="button" class="btn btn-danger" href="/student_delete/{{ student.id }}">Delete</a>
+                <td><a type="button" class="btn btn-warning" href="{% url 'student_update' student.id %}">Update</a>
+                    <a type="button" class="btn btn-danger" href="{% url 'student_delete' student.id %}">Delete</a>
                 </td>
             </tr>
             {% endfor %}

@@ -3,8 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Student(models.Model):
-    Student_ID=models.AutoField(db_column='id',primary_key=True)
+class StudentDetails(models.Model):
     FirstName = models.CharField(
         db_column='firstname', max_length=100, blank=False)
     LastName = models.CharField(
